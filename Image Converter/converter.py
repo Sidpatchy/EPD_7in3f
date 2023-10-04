@@ -71,7 +71,7 @@ def generate_c_file(image_path, output_dir):
     byte_array = convert_image_to_array(img, PALETTE)
 
     base_filename = os.path.splitext(os.path.basename(image_path))[0]
-    c_filename, h_filename = base_filename + ".c", base_filename + ".h"
+    c_filename, h_filename = base_filename + ".cpp", base_filename + ".h"
     array_name = f"{base_filename}Image7colour"
 
     with open(os.path.join(output_dir, c_filename), 'w') as f:
